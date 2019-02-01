@@ -9,7 +9,7 @@
 
 > Create AWS free account 
 
-![my-aws-account](../Pictures/my-aWS-account.png)
+![my-aws-account](../blob/master/Pictures/my-aWS-account.png)
  
 > Setup: Launch Configuration
 
