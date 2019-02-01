@@ -9,13 +9,13 @@
 
 > Create AWS free account 
 
-![my-aws-account](../blob/master/Pictures/my-aWS-account.png)
+![my-aws-account](../Algo-Act/Pictures/my-aWS-account.png)
  
 > Setup: Launch Configuration
 
 - Go to EC2 console and click on Launch Configuration from Auto Scaling
 
-![create-lc](../Pictures/create-lc.png)
+![create-lc](../Algo-Act/Pictures/create-lc.png)
 
 - Choose AMI and then Choose Instance Type
 
