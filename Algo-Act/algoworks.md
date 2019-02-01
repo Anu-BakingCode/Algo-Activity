@@ -21,7 +21,7 @@
 
 - On Configure details, name the launch configuration and enable detail monitoring 
 
-![launch-ec2](../Pictures/launch-ec2.png)
+![launch-ec2](../Algo-Act/Pictures/launch-ec2.png)
 
 - After that, Add the storage and Security Groups
 
@@ -34,27 +34,27 @@
 
 - configure group name, group initial size, and VPC and subnets .
 
-![asg](../Pictures/asg.png)
+![asg](../Algo-Act/Pictures/asg.png)
 
 - Configure the scaling policies. On scaling policy page, you can specify the minimum and maximum number of instance in this group
 
   As perthe requirement the min_size = 1 and max_size = 3
 
-![increase-asg](../Pictures/increase-asg.png)
+![increase-asg](../Algo-Act/Pictures/increase-asg.png)
 
-![decrease-asg](../Pictures/decrease-asg.png)
+![decrease-asg](../Algo-Act/Pictures/decrease-asg.png)
 
 -  As it works based on alarm, create the alarm by clicking on ‘add new alarm’.
    Here the alarm created is based on CPU utilization. If CPU utilization crosses 80% the auto scaling launches new instances based on the step action.
    And if CPU Utilization is less than 40% it terminates the instance. 
 
-![80-alarm](../Pictures/80-alarm.png)
+![80-alarm](../Algo-Act/Pictures/80-alarm.png)
  
-![down-alarm](../Pictures/down-alarm.png)
+![down-alarm](../Algo-Act/Pictures/down-alarm.png)
 
 - Next: Configure Notification’ to get the notification based on launch, terminate, and fail etc.
 
-![notify](../Pictures/notify.png)
+![notify](../Algo-Act/Pictures/notify.png)
 
 - Check the CPU load on the running instance ( goto CloudWatch and create a Dashboard based on the metric)
 
@@ -65,11 +65,11 @@
 
 ```
 
-![cpu-1](../Pictures/cpu-1.png)
+![cpu-1](../Algo-Act/Pictures/cpu-1.png)
 
 - New Instance launched via Auto Scaling Group
 
-![after-99](../Pictures/after-99.png)
+![after-99](../Algo-Act/Pictures/after-99.png)
 
 - Now, to scale in decrease the CPU utilization via command
 
@@ -83,9 +83,9 @@
 
 - It triggers another alarm and received the notification , one for threshold < 40 other for instance termination via ASG
 
-![cpu-less40](../Pictures/cpu-less40.png)
+![cpu-less40](../Algo-Act/Pictures/cpu-less40.png)
 
-![lessthan40](../Pictures/lessthan40.png)
+![lessthan40](../Algo-Act/Pictures/lessthan40.png)
 
 
 ## TASK2
@@ -150,14 +150,14 @@ def lambda_handler(event, context):
 
 ```
    
-![lambda](../Pictures/lambda.png)
+![lambda](../Algo-Act/Pictures/lambda.png)
 
 After executing the lambda the instance type changed to m3.xlarge
 
-![lambda-result](../Pictures/lambda-result.png)
+![lambda-result](../Algo-Act/Pictures/lambda-result.png)
 
 
-And vice-versa we can do the same thing for scaling down.
+> NOTE:And vice-versa we can do the same thing for scaling down.
   
 
 
