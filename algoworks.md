@@ -9,19 +9,19 @@
 
 > Create AWS free account 
 
-![my-aws-account](../)
+![my-aws-account](../Pictures/my-aWS-account.png)
  
 > Setup: Launch Configuration
 
 - Go to EC2 console and click on Launch Configuration from Auto Scaling
 
-![create-lc](../)
+![create-lc](../Pictures/create-lc.png)
 
 - Choose AMI and then Choose Instance Type
 
 - On Configure details, name the launch configuration and enable detail monitoring 
 
-![launch-ec2](../)
+![launch-ec2](../Pictures/launch-ec2.png)
 
 - After that, Add the storage and Security Groups
 
@@ -34,27 +34,27 @@
 
 - configure group name, group initial size, and VPC and subnets .
 
-![asg](../)
+![asg](../Pictures/asg.png)
 
 - Configure the scaling policies. On scaling policy page, you can specify the minimum and maximum number of instance in this group
 
   As perthe requirement the min_size = 1 and max_size = 3
 
-![increase-asg](../)
+![increase-asg](../Pictures/increase-asg.png)
 
-![decrease-asg](../)
+![decrease-asg](../Pictures/decrease-asg.png)
 
 -  As it works based on alarm, create the alarm by clicking on ‘add new alarm’.
    Here the alarm created is based on CPU utilization. If CPU utilization crosses 80% the auto scaling launches new instances based on the step action.
    And if CPU Utilization is less than 40% it terminates the instance. 
 
-![80-alarm](../)
+![80-alarm](../Pictures/80-alarm.png)
  
-![down-alarm](../)
+![down-alarm](../Pictures/down-alarm.png)
 
 - Next: Configure Notification’ to get the notification based on launch, terminate, and fail etc.
 
-![notify](../)
+![notify](../Pictures/notify.png)
 
 - Check the CPU load on the running instance ( goto CloudWatch and create a Dashboard based on the metric)
 
@@ -65,11 +65,11 @@
 
 ```
 
-![cpu-1](../)
+![cpu-1](../Pictures/cpu-1.png)
 
 - New Instance launched via Auto Scaling Group
 
-![after-99](../)
+![after-99](../Pictures/after-99.png)
 
 - Now, to scale in decrease the CPU utilization via command
 
@@ -83,9 +83,9 @@
 
 - It triggers another alarm and received the notification , one for threshold < 40 other for instance termination via ASG
 
-![cpu-less40](../)
+![cpu-less40](../Pictures/cpu-less40.png)
 
-![lessthan40](../)
+![lessthan40](../Pictures/lessthan40.png)
 
 
 ## TASK2
@@ -150,11 +150,14 @@ def lambda_handler(event, context):
 
 ```
    
-![lambda](../)
+![lambda](../Pictures/lambda.png)
 
 After executing the lambda the instance type changed to m3.xlarge
 
-![lambda-result](../)
+![lambda-result](../Pictures/lambda-result.png)
+
+
+And vice-versa we can do the same thing for scaling down.
   
 
 
